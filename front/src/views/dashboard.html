@@ -28,13 +28,13 @@
         </div>
     </div>
 
-    <h2 ng-if="!error && !fromSocialShare">Score details</h2>
-    <div ng-if="!error && !fromSocialShare" class="notations">
-        <div ng-repeat="categoryKey in categoriesOrder" ng-init="category = result.scoreProfiles.generic.categories[categoryKey]">
+    <h2 ng-if="!error && !fromSocialShare">Score details <span ng-click="toggleCollapsed()" class="mdi" ng-class="{'mdi-plus-box-outline':collapsed, 'mdi-minus-box-outline':!collapsed}" style="cursor: pointer;"></span></h2>
+    <div ng-if="!error && !fromSocialShare" class="notations" ng-class="{collapsed: collapsed}">
+        <div ng-repeat="categoryKey in categoriesOrder" ng-init="category = result.scoreProfiles.generic.categories[categoryKey]" class="notation">
             <grade score="category.categoryScore" class="categoryScore"></grade>
             <div class="category">{{category.label}}</div>
             <div class="criteria">
-                <div class="table" title="Click to see details">
+                <div ng-if="!collapsed" class="table" title="Click to see details">
                     <a ng-repeat="ruleName in category.rules" ng-if="result.rules[ruleName]" ng-init="rule = result.rules[ruleName]"
                          ng-class="{'warning': rule.abnormal}" href="result/{{runId}}/rule/{{ruleName}}">
                         <div class="grade">
@@ -49,6 +49,13 @@
                             <span ng-if="rule.abnormalityScore <= -300" class="icon-warning"></span>
                         </div>
                         <div class="info"><span class="icon-question"></span></div>
+                    </a>
+                </div>
+                <div ng-if="collapsed" class="table" title="Click to see details">
+                    <a ng-repeat="ruleName in category.rules" ng-if="result.rules[ruleName]" ng-init="rule = result.rules[ruleName]" ng-class="{'warning': rule.abnormal}" ng-click="toggleCollapsed()">
+                        <div class="grade">
+                            <grade score="rule.score"></grade>
+                        </div>
                     </a>
                 </div>
             </div>

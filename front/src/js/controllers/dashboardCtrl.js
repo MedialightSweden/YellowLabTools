@@ -4,6 +4,7 @@ dashboardCtrl.controller('DashboardCtrl', ['$scope', '$rootScope', '$routeParams
     $scope.runId = $routeParams.runId;
     $scope.Menu = Menu.setCurrentPage('dashboard', $scope.runId);
     $scope.fromSocialShare = $location.search().share;
+    $scope.collapsed = true;
     
     function loadResults() {
         // Load result if needed
@@ -29,6 +30,10 @@ dashboardCtrl.controller('DashboardCtrl', ['$scope', '$rootScope', '$routeParams
 
         $scope.tweetText = 'I\'ve discovered this cool open-source tool that audits the front-end quality of a web page: ';
     }
+
+    $scope.toggleCollapsed = function() {
+      $scope.collapsed = !$scope.collapsed;
+    };
 
     $scope.testAgain = function() {
         API.relaunchTest($scope.result);
