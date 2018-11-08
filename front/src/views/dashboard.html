@@ -30,7 +30,7 @@
                         </a>
                     </div>
                 </div>
-
+                <p class="d-md-none">To see more information, please use this tool on a device with a bigger screen.</p>
                 <h2 class="d-none d-md-block" ng-if="!error && !fromSocialShare">Score details <span ng-click="toggleCollapsed()" class="mdi" ng-class="{'mdi-plus-box-outline':collapsed, 'mdi-minus-box-outline':!collapsed}" style="cursor: pointer;"></span></h2>
                 <div ng-if="!error && !fromSocialShare" class="notations d-none d-md-table" ng-class="{collapsed: collapsed}">
                     <div ng-repeat="categoryKey in categoriesOrder" ng-init="category = result.scoreProfiles.generic.categories[categoryKey]" class="notation">
