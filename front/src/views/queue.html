@@ -1,36 +1,42 @@
-<p ng-if="url">Tested url: &nbsp; <a href="{{url}}" target="_blank" class="testedUrl">{{url}}</a></p>
+<section class="website-test my-5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="col-lg-6 offset-lg-3 text-center">
+            <strong class="d-block mb-4" ng-if="url"><em>Tested url:<a href="{{url}}" target="_blank" class="text-white d-block mt-2">{{url}}</a></em></strong>
 
-<div ng-if="!notFound && !connectionLost">
-    <div ng-if="status.statusCode == 'failed'">
-        <div class="status">Test failed</div>
-        <p class="statusSubMessage">{{status.error}}</p>
-        
-        <a class="linkButton" href="https://github.com/gmetais/YellowLabTools/issues" target="_blank">Report the issue on GitHub</a>
-        <a class="linkButton" href="<%= baseUrl %>">New test</a>
-    </div>
-    <div ng-if="status.statusCode == 'awaiting'">
-        <div class="status">
-            <ng-pluralize count="status.position" when="{'one': 'Waiting behind 1 other test', 'other': 'Waiting behind {} other tests'}">
-            </ng-pluralize>
+            <div ng-if="!notFound && !connectionLost">
+                <div ng-if="status.statusCode == 'failed'">
+                    <h3>Test failed</h3>
+                    <p>{{status.error}}</p>
+
+                    <a class="btn btn-primary original" href="<%= baseUrl %>"><span class="mdi mdi-arrow-left mdi-24px original align-middle"></span> <small class="align-text-top">New test</small></a>
+                </div>
+                <div ng-if="status.statusCode == 'awaiting'">
+                    <h3>
+                        <ng-pluralize count="status.position" when="{'one': 'Waiting behind 1 other test', 'other': 'Waiting behind {} other tests'}">
+                        </ng-pluralize>
+                    </h3>
+                    <p>(auto-refresh activated)</p>
+                </div>
+                <div ng-if="status.statusCode == 'running'">
+                    <h3>Test is running...</h3>
+                    <p>(auto-refresh activated)</p>
+                </div>
+                <div ng-if="status.statusCode == 'complete'">
+                    <h3>Test complete</h3>
+                    <p>Opening results...</p>
+                </div>
+            </div>
+            <div ng-if="notFound == true">
+                <h3>Error 404 (test not found)</h3>
+                <p>The server probably just rebooted. We are very sorry about that, please try to launch the test again.</p>
+
+                <a class="btn btn-primary original" href="<%= baseUrl %>"><span class="mdi mdi-arrow-left mdi-24px original align-middle"></span> <small class="align-text-top">New test</small></a>
+            </div>
+            <div ng-if="connectionLost == true">
+                <h3>Connection lost with server</h3>
+                <p>Check your wifi cable, or maybe YellowLab.tools is rebooting.</p>
+            </div>
         </div>
-        <p class="statusSubMessage">(auto-refresh activated)</p>
     </div>
-    <div ng-if="status.statusCode == 'running'">
-        <div class="status">Test is running...</div>
-        <p class="statusSubMessage">(auto-refresh activated)</p>
-    </div>
-    <div ng-if="status.statusCode == 'complete'">
-        <div class="status">Test complete</div>
-        <p class="statusSubMessage">Opening results...</p>
-    </div>
-</div>
-<div ng-if="notFound == true">
-    <div class="status">Error 404 (test not found)</div>
-    <p class="statusSubMessage">The server probably just rebooted. We are very sorry about that, please try to launch the test again.</p>
-    
-    <a class="linkButton" href="<%= baseUrl %>">New test</a>
-</div>
-<div ng-if="connectionLost == true">
-    <div class="status">Connection lost with server</div>
-    <p class="statusSubMessage">Check your wifi cable, or maybe YellowLab.tools is rebooting.</p>
-</div>
+</section>

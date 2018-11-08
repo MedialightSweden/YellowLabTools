@@ -1,130 +1,42 @@
-@import "icons.less";
-
-html {
-    margin: 100px 50px;
-}
-
-body {
-    margin: 0 auto;
-    max-width: 1280px;
-    background: #9c4274;
-    color: #fff;
-    font-size: 16px;
-    text-align: center;
-}
-
-body, input[type=submit], input[type=text], input[type=url], input[type=number], button {
-    font-family: 'Century Gothic', helvetica, arial, sans-serif;
-}
-
-input[type=submit] {
-    cursor: pointer;
-}
-
-h1 span {
-    display: inline-block;
-    height: 1em;
-    width: 1em;
-    color: #ffa319;
-}
-
-.resultsMenu {
-    margin-top: 2em;
-}
-.resultsMenu .menuItem {
-    display: inline-block;
-    margin: 1em;
-    width: 8em;
-    height: 7em;
-    color: #fff;
-    border: 3px solid #fff;
-    border-radius: 0.5em;
-    cursor: pointer;
-    text-decoration: none;
-    &.back, &.restart {
-        color: #413;
-        border-color: #413;
-    }
-}
-.resultsMenu .menuItem div {
-    padding-top: 0.5em;
-    font-size: 3em;
-}
-.resultsMenu .active, .resultsMenu .menuItem.active:hover {
-    color: #ffa319;
-    border-color: #ffa319;
-}
-.resultsMenu .menuItem:hover {
-    color: #ffa319;
-}
-.resultsMenu span {
-    position: relative;
-    top: 0.5em;
-}
-
 /* Grade colors */
 .A {
     /* green */
-    background: #0C4;
+    background: #1fcc3b;
 }
 .B {
     /* green */
-    background: #CD0;
+    background: #b2cc17;
 }
 .C {
     /* yellow */
-    background: #FD2;
+    background: #f2cc0d;
 }
 .D {
     /* orange */
-    background: #FA2;
+    background: #e69c2e;
 }
 .E {
     /* red */
-    background: #F60;
+    background: #e85e2c;
 }
 .F {
     /* red */
-    background: #F22;
+    background: #e63939;
 }
 .NA {
     /* Non applicable */
     background: #CCC;
+    background: #CCC;
 }
 
 .board {
-    margin-top: 2em;
-    padding: 1em;
+    margin-top: -150px;
+    padding: 15px;
     background: #fff;
     color: #000;
-    border-radius: 0.5em;
+    border-radius: 4px;
     text-align: left;
 }
-
-.backToDashboard {
-    text-align: center;
-
-    a {
-        font-size: 0.9em;
-        display: block;
-        margin-top: 4em;
-        color: black;
-    }
-}
-
-a.linkButton {
-    font-size: 1em;
-    padding: 0.3em 0.5em;
-    margin: 0.5em;
-    line-height: 2em;
-    border: 0 solid;
-    border-radius: 0.5em;
-    box-shadow: 0.1em 0.2em 0 0 #5e2846;
-    background: #e74c3c;
-    color: #fff;
-    text-decoration: none;
-}
-
 
 .screenshotWrapper {
     display: inline-block;
@@ -236,25 +148,4 @@ a.linkButton {
         width: 8.25em;
         height: 11em;
     }
-}
-
-.footer {
-    padding: 3em;
-    color: #413;
-    a {
-        color: inherit;
-    }
-    .version {
-        font-size: 0.7em;
-    }
-    .github {
-        margin: 1em 0 0 0.5em;
-    }
-    .sponsor {
-        font-size: 0.9em;
-    }
-}
-
-[class^="icon-"]:before, [class*=" icon-"]:before {
-    vertical-align: baseline;
 }

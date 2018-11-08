@@ -1,26 +1,29 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<meta charset="utf-8">
-    <title>Yellow Lab Tools</title>
+    <meta charset="UTF-8">
+    <title>Gratis analys - SEO-testa din hemsida här | Noor    </title>
     <base href="<%= baseUrl %>">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <meta name="description" content="Testa din hemsida för att se hur Google uppfattar din sida och vad som behöver förbättras - SEO-testa din hemsida gratis här, testet tar bara 1 minut! →">
+    <link rel="canonical" href="https://noor.se/gratis-analys/">
+
     <link rel="icon" type="image/png" href="img/favicon.png">
-    <meta property="og:image" content="img/logo-large.png" />
-    <meta name="description" content="Free online web performance tool. Audit your webpage for performance and front-end quality issues. And it's open-source!" />
+
+    <link href="https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
 
     <!-- build:css css/styles.css-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="node_modules/@mdi/font/css/materialdesignicons.css">
-    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/dashboard.css">
-    <link rel="stylesheet" type="text/css" href="css/queue.css">
     <link rel="stylesheet" type="text/css" href="css/rule.css">
     <link rel="stylesheet" type="text/css" href="css/screenshot.css">
     <link rel="stylesheet" type="text/css" href="css/timeline.css">
     <link rel="stylesheet" type="text/css" href="css/about.css">
     <!-- endbuild -->
-
-    <link rel="stylesheet" href="//cdn.materialdesignicons.com/3.0.39/css/materialdesignicons.min.css">
 
     <link rel="preconnect" href="https://www.google-analytics.com">
     <link rel="dns-prefetch" href="https://www.google-analytics.com">
@@ -29,18 +32,234 @@
     <link rel="preconnect" href="https://api.github.com">
     <link rel="dns-prefetch" href="https://api.github.com">
 
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 
 <body ng-app="YellowLabTools">
-    <div id="header"><h1>Yellow Lab <span class="icon-lab"></span> Tools</h1></div>
+    <section class="header about-us">
+    <div class="overlay-simple"></div>
+    <nav class="navbar fixed-top navbar-expand-lg w-100" id="second-nav">
+        <div class="container">
+            <button class="navbar-toggler hidden-lg d-block d-lg-none d-xl-block-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">
+                <div id="nav-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+
+            <a class="navbar-brand" href="/">
+                <img class="img-fluid" src="img/logo.svg" alt="">
+            </a>
+
+            <a href="/kontakta-oss/" class="hidden-lg d-block d-lg-none d-xl-block-up">
+                <span class="mdi mdi-email-outline"></span>
+            </a>
+
+            <div class="collapse navbar-collapse" id="mainNavbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown1" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tj&#xE4;nster</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                            <li class="dropdown-item first-child"><a class="dropdown-item" href="/tjanster/">Alla v&#xE5;ra tj&#xE4;nster</a>
+                            </li>
+                            <li class="dropdown-item"><a class="dropdown-item" href="/seo/">SEO</a>
+                            </li>
+                            <li class="dropdown-item"><a class="dropdown-item" href="/webb/">Webb</a>
+                            </li>
+                            <li class="dropdown-item"><a class="dropdown-item" href="/digital-annonsering/">Digital annonsering</a>
+                            </li>
+                            <li class="dropdown-item"><a class="dropdown-item" href="/sociala-medier/">Sociala Medier</a>
+                            </li>
+                            <li class="dropdown-item"><a class="dropdown-item" href="/content-marketing/">Content marketing</a>
+                            </li>
+                            <li class="dropdown-item"><a class="dropdown-item" href="/kopa-domannamn-golight/">Dom&#xE4;ner</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Digitalskolan</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            <li class="dropdown-item first-child"><a class="dropdown-item" href="/digitalskolan/">&#xD6;versikt</a>
+                            </li>
+                            <li class="dropdown-item"><a class="dropdown-item" href="/digitalskolan/vad-ar-seo/">SEO</a>
+                            </li>
+                            <li class="dropdown-item d-none"><a class="dropdown-item" href="#">Google Ads</a>
+                            </li>
+                            <li class="dropdown-item d-none"><a class="dropdown-item" href="#">Webbdesign</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="/nyheter/">Nyheter</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="/om-noor/">Om Noor</a>
+                    </li>
+                    <li class="nav-item hidden-lg d-block d-lg-none d-xl-block-up"><a class="nav-link" href="/lediga-tjanster/">Lediga tjänster</a></li>
+                    <li class="nav-item hidden-lg d-block d-lg-none d-xl-block-up"><a class="nav-link" href="/kontakta-oss/">Kontakta oss</a></li>
+                    <li class="nav-item hidden-lg d-block d-lg-none d-xl-block-up"><a class="nav-link" href="tel:010-2069060">010 - 206 90 60</a></li>
+
+                    <li class="nav-item button text-white pr-0 bg-warning"><a class="nav-link text-white" href="/gratis-analys/">Testa din sida</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</section>
     <div id="body" ng-view autoscroll="true"></div>
+    <div id="visMd"></div>
+    <div class="shape-footer"></div>
     <div class="footer">
-        <span class="version">@@version</span>
-        <br><a href="<%= baseUrl %>about">More about Yellow Lab Tools</a><br>
-        <div class="github"><iframe id="ghbtn" frameborder="0" scrolling="0" width="145px" height="30px"></iframe></div>
+        <div class="container">
+        <div class="row position-relative">
+            <div class="col-md-2">
+                <div class="FF pb-4">
+                    <div>
+                        <img src="img/logo-no-shadow.svg" alt="" class="mx-auto d-block img-fluid">
+                    </div>
+                </div>
+
+
+                <div class="d-block d-sm-block d-md-none d-lg-none d-xl-none">
+                    <div class="contact-us">
+                        <h6><a href="/kontakta-oss/">Kontakt</a></h6>
+                        <ul>
+                            <li><a href="tel:010-2069060">010 - 206 90 60</a></li>
+                            <li><a href="mailto:info@noor.se">info@noor.se</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="addresses">
+                    <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2034.6162022011872!2d18.05637091607271!3d59.33936128166232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d662221b717%3A0x1f973e4eb231c6fc!2sSaltm%C3%A4targatan+5%2C+113+59+Stockholm%2C+Sweden!5e0!3m2!1sen!2s!4v1539587268693" target="_blank">
+                        <div class="address">
+                            <h6>Noor Stockholm</h6>
+                            <p>Saltmätargatan 5</p>
+                            <p>113 59 Stockholm</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="col-md-2">
+                <div class="FF pb-4"></div>
+                <div class="addresses">
+                    <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2131.5228468211553!2d11.94357521614503!3d57.7075760470126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff35b0e6ebbcf%3A0x6e13279721c302b5!2sBror+Nilssons+gata+5%2C+417+55+G%C3%B6teborg%2C+Sweden!5e0!3m2!1sen!2s!4v1539442241225" target="_blank">
+                        <div class="address">
+                            <h6>Noor Göteborg</h6>
+                            <p>Bror Nilssonsgata 5</p>
+                            <p>417 55 Götebrog</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="FF pb-4">
+                    <div class="contact-us d-none d-sm-none d-md-block d-lg-block d-xl-block">
+                        <h6><a href="/kontakta-oss/">Kontakt</a></h6>
+                        <ul>
+                            <li><a href="tel:010-2069060">010 - 206 90 60</a></li>
+                            <li><a href="mailto:info@noor.se">info@noor.se</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="addresses">
+                    <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2254.2892979339445!2d12.99742951608423!3d55.59697861146632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4653a150d39de639%3A0x9f98565726894d6a!2sB6%2C+J%C3%B6rgen+Ankersgatan+20%2C+211+47+Malm%C3%B6%2C+Sweden!5e0!3m2!1sen!2s!4v1539507700425" target="_blank">
+                        <div class="address">
+                            <h6>Noor Malmö</h6>
+                            <p>Jörgen Ankersgatan 20 </p>
+                            <p>211 47 Malmö</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="FF pb-4">
+                    <div class="free-analysis d-none d-sm-none d-md-block d-lg-block d-xl-block">
+                        <h6><a href="/gratis-analys/">Gratis analys</a></h6>
+                        <ul>
+                            <li><a href="/gratis-analys/">Starta analys här!</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="addresses">
+                    <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1759.8091314806247!2d20.25445211633088!3d63.827509249563825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x467c5b0cd61776cf%3A0xb8ebade97e91ddcb!2sV%C3%A4stra+Esplanaden+9A%2C+903+25+Ume%C3%A5%2C+Sweden!5e0!3m2!1sen!2s!4v1539516591154" target="_blank">
+                        <div class="address">
+                            <h6>Noor Umeå</h6>
+                            <p>Västra Esplanaden 9A </p>
+                            <p>903 25 Umeå</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 d-none d-sm-none d-md-block d-lg-block d-xl-block">
+                <h6>Nyfiken på vad som händer?</h6>
+                <p>Få de senaste nyheterna inom Noor och den digitala välden. </p>
+                <form method="post" action="">
+                    <div class="form-group">
+                        <input type="search" placeholder="E-post" class="form-control" id="email-in-footer" aria-describedby="email-in-footer">
+
+                        <div class="clearfix"></div>
+
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="checkbox-in-footer">
+                            <label class="form-check-label" for="checkbox-in-footer">Jag godkänner <a href="https://noor.se/pdfs/Noor-GDPR-Nyhetsbrev.pdf" target="_blank">allmänna villkor</a></label>
+                        </div>
+
+                        <button id="submit-btn-desktop" type="submit" class="btn btn-primary">Prenumerera</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="sub-footer">
+        <div class="container">
+        <div class="row footer-border">
+            <div class="col-md-3 d-none d-sm-none d-md-block d-lg-block">
+                <div class="copy-right-text">
+                    <p>© Noor. All rights reserved.</p>
+                </div>
+            </div>
+            <div class="col-md-2 d-none d-sm-none d-md-block d-lg-block">
+                <div class="item">
+                    <p class="text-center"><a href="/nyheter/">Nyheter</a></p>
+                </div>
+            </div>
+            <div class="col-md-2 d-none d-sm-none d-md-block d-lg-block">
+                <div class="item">
+                    <p class="text-center"><a href="/lediga-tjanster/">Lediga tjänster</a></p>
+                </div>
+            </div>
+            <div class="col-md-2 d-none d-sm-none d-md-block d-lg-block">
+                <div class="item">
+                    <p class="text-center"><a href="/om-noor/">Om Noor</a></p>
+                </div>
+            </div>
+
+            <div class="col-md-3 icons-in-footer">
+                <div class="icons">
+                    <a href="https://www.facebook.com/noordigitalbyra/" target="_blank"><span class="mdi mdi-facebook"></span></a>
+                    <a href="#" target="_blank"><span class="mdi mdi-instagram"></span></a>
+                    <a href="https://www.linkedin.com/company/noor-digitalbyra/" target="_blank"><span class="mdi mdi-linkedin"></span></a>
+                </div>
+                <div class="g-partnersbadge" data-agency-id="4714137539"></div>
+            </div>
+
+            <div class="col-md-3 my-3 d-sm-block d-md-none d-lg-none d-xl-none">
+                <div class="copy-right-text text-center">
+                    <p>© Noor. All rights reserved.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- build:js js/all.js -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/angular/angular.min.js"></script>
     <script src="node_modules/chart.js/dist/Chart.min.js"></script>
     <script src="node_modules/angular-route/angular-route.min.js"></script>
@@ -64,6 +283,12 @@
 
     <script src="js/directives/gradeDirective.js"></script>
     <script src="js/directives/offendersDirectives.js"></script>
+
+
+    <script src="js/vendor/sticky-menu.js"></script>
+    <script src="js/vendor/equal-height-divisions.js"></script>
+    <script src="js/vendor/btn-active.js"></script>
+    <script src="js/vendor/nav-icon-motion.js"></script>
     <!-- endbuild -->
 
     <script>
