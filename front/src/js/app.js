@@ -41,9 +41,9 @@ yltApp.run(['$rootScope', '$location', function($rootScope, $location) {
     });
 
     // GitHub star button (asynchronously loaded iframe)
-    window.addEventListener('load', function() {
+    /*window.addEventListener('load', function() {
         window.document.getElementById('ghbtn').src = 'https://ghbtns.com/github-btn.html?user=gmetais&repo=YellowLabTools&type=star&count=true&size=large';
-    });
+    });*/
 }]);
 
 yltApp.config(['$routeProvider', '$locationProvider',
