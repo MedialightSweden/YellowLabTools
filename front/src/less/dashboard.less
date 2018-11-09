@@ -1,5 +1,6 @@
 .summary {
   text-align: center;
+  border: 1px solid rgba(0,0,0,0.125);
 
   .globalScore {
     display: table;
@@ -94,14 +95,15 @@
           }
 
           > a:hover > div {
-            background: #EBD8E2;
+            background: #cfe6e6;
             cursor: pointer;
 
             &.info {
-              background: #FFF;
+              background: transparent;
+              opacity: 1;
 
-              .icon-question {
-                color: #EBD8E2;
+              .mdi {
+                color: #cfe6e6;
               }
             }
           }
@@ -139,6 +141,8 @@
         }
 
         .info {
+          opacity: 0;
+          color: transparent;
           width: 2%;
           text-align: center;
           vertical-align: middle;

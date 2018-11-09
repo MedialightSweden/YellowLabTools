@@ -1,121 +1,133 @@
 /* Grade colors */
 .A {
   /* green */
-  background: #1fcc3b; }
-
+  background: #1fcc3b;
+}
 .B {
   /* green */
-  background: #b2cc17; }
-
+  background: #b2cc17;
+}
 .C {
   /* yellow */
-  background: #f2cc0d; }
-
+  background: #f2cc0d;
+}
 .D {
   /* orange */
-  background: #e69c2e; }
-
+  background: #e69c2e;
+}
 .E {
   /* red */
-  background: #e85e2c; }
-
+  background: #e85e2c;
+}
 .F {
   /* red */
-  background: #e63939; }
-
+  background: #e63939;
+}
 .NA {
   /* Non applicable */
   background: #CCC;
-  background: #CCC; }
-
+}
 .board {
   margin-top: -150px;
   padding: 15px;
   background: #fff;
   color: #000;
   border-radius: 4px;
-  text-align: left; }
-
+  text-align: left;
+}
 .screenshotWrapper {
   display: inline-block;
   position: relative;
-  background: #000; }
-  .screenshotWrapper > div {
-    position: relative;
-    overflow: hidden; }
-    .screenshotWrapper > div:hover {
-      overflow: auto; }
-  .screenshotWrapper .screenshotImage {
-    width: 100%; }
-  .screenshotWrapper .screenshotError {
-    color: #fff; }
-
+  background: #000;
+}
+.screenshotWrapper > div {
+  position: relative;
+  overflow: hidden;
+}
+.screenshotWrapper > div:hover {
+  overflow: auto;
+}
+.screenshotWrapper .screenshotImage {
+  width: 100%;
+}
+.screenshotWrapper .screenshotError {
+  color: #fff;
+}
 .screenshotWrapper.desktop {
   border: 0.2em solid #AAA;
   padding: 0.5em;
   border-top-left-radius: 0.4em;
-  border-top-right-radius: 0.4em; }
-  .screenshotWrapper.desktop:before {
-    position: absolute;
-    width: 15em;
-    height: 0.6em;
-    bottom: -0.75em;
-    left: -1em;
-    background: #CCC;
-    border-bottom-left-radius: 0.2em;
-    border-bottom-right-radius: 0.2em;
-    content: " "; }
-  .screenshotWrapper.desktop:after {
-    position: absolute;
-    width: 0.4em;
-    height: 0.2em;
-    bottom: -0.55em;
-    left: 12.5em;
-    background: lime;
-    content: " "; }
-  .screenshotWrapper.desktop > div {
-    width: 12em;
-    height: 6.75em; }
-
+  border-top-right-radius: 0.4em;
+}
+.screenshotWrapper.desktop:before {
+  position: absolute;
+  width: 15em;
+  height: 0.6em;
+  bottom: -0.75em;
+  left: -1em;
+  background: #CCC;
+  border-bottom-left-radius: 0.2em;
+  border-bottom-right-radius: 0.2em;
+  content: " ";
+}
+.screenshotWrapper.desktop:after {
+  position: absolute;
+  width: 0.4em;
+  height: 0.2em;
+  bottom: -0.55em;
+  left: 12.5em;
+  background: lime;
+  content: " ";
+}
+.screenshotWrapper.desktop > div {
+  width: 12em;
+  height: 6.75em;
+}
 .screenshotWrapper.phone {
   border: 0.07em solid #CCC;
   padding: 1em 0.3em 1.5em;
-  border-radius: 0.6em; }
-  .screenshotWrapper.phone:before {
-    position: absolute;
-    width: 0.8em;
-    height: 0.8em;
-    bottom: 0.3em;
-    left: 3.3em;
-    border: 0.07em solid #CCC;
-    border-radius: 0.5em;
-    content: " "; }
-  .screenshotWrapper.phone:after {
-    position: absolute;
-    width: 1em;
-    height: 0.1em;
-    bottom: 13.9em;
-    left: 3.2em;
-    background: #555;
-    border-radius: 0.05em;
-    content: " "; }
-  .screenshotWrapper.phone > div {
-    width: 6.75em;
-    height: 12em; }
-
+  border-radius: 0.6em;
+}
+.screenshotWrapper.phone:before {
+  position: absolute;
+  width: 0.8em;
+  height: 0.8em;
+  bottom: 0.3em;
+  left: 3.3em;
+  border: 0.07em solid #CCC;
+  border-radius: 0.5em;
+  content: " ";
+}
+.screenshotWrapper.phone:after {
+  position: absolute;
+  width: 1em;
+  height: 0.1em;
+  bottom: 13.9em;
+  left: 3.2em;
+  background: #555;
+  border-radius: 0.05em;
+  content: " ";
+}
+.screenshotWrapper.phone > div {
+  width: 6.75em;
+  height: 12em;
+}
 .screenshotWrapper.tablet {
   border: 0.07em solid #CCC;
   padding: 0.8em 0.5em 0.9em;
-  border-radius: 0.6em; }
-  .screenshotWrapper.tablet:before {
-    position: absolute;
-    width: 0.5em;
-    height: 0.5em;
-    bottom: 0.15em;
-    left: 4.35em;
-    border: 0.07em solid #CCC;
-    border-radius: 0.4em;
-    content: " "; }
-  .screenshotWrapper.tablet > div {
-    width: 8.25em;
-    height: 11em; }
+  border-radius: 0.6em;
+}
+.screenshotWrapper.tablet:before {
+  position: absolute;
+  width: 0.5em;
+  height: 0.5em;
+  bottom: 0.15em;
+  left: 4.35em;
+  border: 0.07em solid #CCC;
+  border-radius: 0.4em;
+  content: " ";
+}
+.screenshotWrapper.tablet > div {
+  width: 8.25em;
+  height: 11em;
+}

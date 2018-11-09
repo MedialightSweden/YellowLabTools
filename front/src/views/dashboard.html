@@ -47,11 +47,11 @@
                                     <div class="result">
                                         <span ng-if="rule.policy.unit == 'bytes'">{{rule.value | bytes}}</span>
                                         <span ng-if="rule.policy.unit != 'bytes'">{{rule.value}}</span>
-                                        <span ng-if="rule.abnormal" class="icon-warning"></span>
-                                        <span ng-if="rule.abnormalityScore <= -100" class="icon-warning"></span>
-                                        <span ng-if="rule.abnormalityScore <= -300" class="icon-warning"></span>
+                                        <span ng-if="rule.abnormal" class="mdi mdi-alert-outline mdi-18px align-text-top"></span>
+                                        <span ng-if="rule.abnormalityScore <= -100" class="mdi mdi-alert-outline mdi-18px align-text-top"></span>
+                                        <span ng-if="rule.abnormalityScore <= -300" class="mdi mdi-alert-outline mdi-18px align-text-top"></span>
                                     </div>
-                                    <div class="info"><span class="icon-question"></span></div>
+                                    <div class="info"><span class="align-text-top mdi mdi-help-circle"></span></div>
                                 </a>
                             </div>
                             <div ng-if="collapsed" class="table mb-0" title="Click to see details">

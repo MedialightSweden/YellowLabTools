@@ -186,16 +186,24 @@
 .table > div > div,
 .table > a > div {
     padding: 0.1em 1em;
-    background: #f2f2f2;
     display: table-cell;
     text-align: left;
+    border-radius: 4px;
+}
+.table > div:nth-child(2n) > div,
+.table > a:nth-child(2n) > div {
+    background: #f2f2f2;
+}
+.table > div:nth-child(2n-1) > div,
+.table > a:nth-child(2n-1) > div {
+    background: #e6e6e6;
 }
 .table > div.jsError > .type, .table > div.jsError > .value {
     color: #e74c3c;
     font-weight: bold;
 }
 .table > div.windowPerformance > div, .table > div.windowPerformance > div.startTime {
-    background: #EBD8E2;
+    background: #cfe6e6;
 }
 .table > div.showingDetails > div {
     background: #f1c40f;
@@ -249,7 +257,7 @@
     }
 
     span:hover {
-        background: #EBD8E2;
+        background: #cfe6e6;
 
         div {
             display: inline-block;
@@ -261,7 +269,7 @@
             padding: 0 1em 0 2em;
             left: 100%;
             top: 0;
-            background: #EBD8E2;
+            background: #cfe6e6;
             line-height: 1.3em;
             height: 1.3em;
             z-index: 2;

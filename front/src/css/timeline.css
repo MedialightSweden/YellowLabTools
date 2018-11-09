@@ -62,34 +62,34 @@
   background: #F04DA7;
 }
 .timeline .domComplete.interval {
-  background: #EDE3FF;
+  background: #ede3ff;
 }
 .timeline .domComplete .color {
-  background: #C2A3FF;
+  background: #c2a3ff;
 }
 .timeline .domContentLoadedEnd.interval {
-  background: #D8F0F0;
+  background: #d8f0f0;
 }
 .timeline .domContentLoadedEnd .color {
-  background: #7ECCCC;
+  background: #7ecccc;
 }
 .timeline .domContentLoaded.interval {
-  background: #E0FFD1;
+  background: #e0ffd1;
 }
 .timeline .domContentLoaded .color {
-  background: #A7E846;
+  background: #a7e846;
 }
 .timeline .domInteractive.interval {
-  background: #FFFCCC;
+  background: #fffccc;
 }
 .timeline .domInteractive .color {
-  background: #FFE433;
+  background: #ffe433;
 }
 .timeline .domCreation.interval {
-  background: #FFE0CC;
+  background: #ffe0cc;
 }
 .timeline .domCreation .color {
-  background: #FF6600;
+  background: #ff6600;
 }
 .timeline .tooltip.detailsOverlay {
   position: absolute;
@@ -163,9 +163,17 @@
 .table > div > div,
 .table > a > div {
   padding: 0.1em 1em;
-  background: #f2f2f2;
   display: table-cell;
   text-align: left;
+  border-radius: 4px;
+}
+.table > div:nth-child(2n) > div,
+.table > a:nth-child(2n) > div {
+  background: #f2f2f2;
+}
+.table > div:nth-child(2n-1) > div,
+.table > a:nth-child(2n-1) > div {
+  background: #e6e6e6;
 }
 .table > div.jsError > .type,
 .table > div.jsError > .value {
@@ -174,7 +182,7 @@
 }
 .table > div.windowPerformance > div,
 .table > div.windowPerformance > div.startTime {
-  background: #EBD8E2;
+  background: #cfe6e6;
 }
 .table > div.showingDetails > div {
   background: #f1c40f;
@@ -216,7 +224,7 @@
   position: relative;
 }
 .table .child span:hover {
-  background: #EBD8E2;
+  background: #cfe6e6;
 }
 .table .child span:hover div {
   display: inline-block;
@@ -227,7 +235,7 @@
   padding: 0 1em 0 2em;
   left: 100%;
   top: 0;
-  background: #EBD8E2;
+  background: #cfe6e6;
   line-height: 1.3em;
   height: 1.3em;
   z-index: 2;
@@ -294,19 +302,19 @@
   white-space: nowrap;
 }
 .table > div > .startTime.domComplete {
-  background: #EDE3FF;
+  background: #ede3ff;
 }
 .table > div > .startTime.domContentLoadedEnd {
-  background: #D8F0F0;
+  background: #d8f0f0;
 }
 .table > div > .startTime.domContentLoaded {
-  background: #E0FFD1;
+  background: #e0ffd1;
 }
 .table > div > .startTime.domInteractive {
-  background: #FFFCCC;
+  background: #fffccc;
 }
 .table > div > .startTime.domCreation {
-  background: #FFE0CC;
+  background: #ffe0cc;
 }
 .execution .icon-warning {
   color: #e74c3c;
