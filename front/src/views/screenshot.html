@@ -3,18 +3,18 @@
     <div class="row">
         <div class="col-12 col-md-10 offset-md-1">
             <div class="screenshot board">
-                <h2>Screenshot</h2>
+                <h2>Skärmbild</h2>
 
                 <div class="screenshotWrapper" ng-class="result.params.options.device || 'desktop'">
                     <div>
                         <img ng-if="result.screenshotUrl" class="screenshotImage" ng-src="{{result.screenshotUrl}}"/>
-                        <span ng-if="!result.screenshotUrl" class="screenshotError">Screenshot not available</span>
+                        <span ng-if="!result.screenshotUrl" class="screenshotError">Skärmbild är inte tillgänglig</span>
                     </div>
                 </div>
 
-                <p>(scroll on the screenshot to see under the fold)</p>
+                <p>(Scrolla på skärmbilden för att se hela innehållet)</p>
 
-                <div class="backToDashboard"><a href="#" ng-click="backToDashboard()" class="btn btn-outline-primary original"><span class="mdi mdi-chevron-left"></span> Back to dashboard</a></div>
+                <div class="backToDashboard"><a href="#" ng-click="backToDashboard()" class="btn btn-outline-primary original"><span class="mdi mdi-chevron-left"></span> Gå tillbaka</a></div>
             </div>
         </div>
     </div>

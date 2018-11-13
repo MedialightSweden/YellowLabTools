@@ -13,7 +13,7 @@
 
                 <div class="globalScore" ng-if="globalScore === 0 || globalScore > 0">
                     <div>
-                        <h2>Global score</h2>
+                        <h2>Helhetsbetyg</h2>
                         <div class="globalScoreDisplay">
                             <grade score="result.scoreProfiles.generic.globalScore" class="globalGrade"></grade>
                             <div class="on100">{{globalScore}}/100</div>
@@ -30,8 +30,8 @@
                         </a>
                     </div>
                 </div>
-                <p class="d-md-none">To see more information, please use this tool on a device with a bigger screen.</p>
-                <h2 class="d-none d-md-block" ng-if="!error && !fromSocialShare">Score details <span ng-click="toggleCollapsed()" class="mdi" ng-class="{'mdi-plus-box-outline':collapsed, 'mdi-minus-box-outline':!collapsed}" style="cursor: pointer;"></span></h2>
+                <p class="d-md-none">Gör gärna testet på en större skärm för att få mer detaljerad information om betyget.</p>
+                <h2 class="d-none d-md-block" ng-if="!error && !fromSocialShare">Detaljerad information <span ng-click="toggleCollapsed()" class="mdi" ng-class="{'mdi-plus-box-outline':collapsed, 'mdi-minus-box-outline':!collapsed}" style="cursor: pointer;"></span></h2>
                 <div ng-if="!error && !fromSocialShare" class="notations d-none d-md-table" ng-class="{collapsed: collapsed}">
                     <div ng-repeat="categoryKey in categoriesOrder" ng-init="category = result.scoreProfiles.generic.categories[categoryKey]" class="notation">
                         <grade score="category.categoryScore" class="categoryScore"></grade>
@@ -66,7 +66,7 @@
                 </div>
 
                 <div ng-if="error">
-                    <h2>Run failed / Run not found</h2>
+                    <h2>Något gick fel</h2>
                 </div>
             </div>
         </div>

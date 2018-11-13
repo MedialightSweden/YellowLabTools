@@ -2,40 +2,40 @@
     <div class="overlay"></div>
     <div class="container">
         <div class="col-lg-6 offset-lg-3 text-center">
-            <strong class="d-block mb-4" ng-if="url"><em>Tested url:<a href="{{url}}" target="_blank" class="text-white d-block mt-2">{{url}}</a></em></strong>
+            <strong class="d-block mb-4" ng-if="url"><em>Testad URL:<a href="{{url}}" target="_blank" class="text-white d-block mt-2">{{url}}</a></em></strong>
 
             <div ng-if="!notFound && !connectionLost">
                 <div ng-if="status.statusCode == 'failed'">
-                    <h3>Test failed</h3>
+                    <h3>Testet misslyckades</h3>
                     <p>{{status.error}}</p>
 
-                    <a class="btn btn-primary original" href="<%= baseUrl %>"><span class="mdi mdi-arrow-left mdi-24px original align-middle"></span> <small class="align-text-top">New test</small></a>
+                    <a class="btn btn-primary original" href="<%= baseUrl %>"><span class="mdi mdi-arrow-left mdi-24px original align-middle"></span> <small class="align-text-top">Nytt test</small></a>
                 </div>
                 <div ng-if="status.statusCode == 'awaiting'">
                     <h3>
-                        <ng-pluralize count="status.position" when="{'one': 'Waiting behind 1 other test', 'other': 'Waiting behind {} other tests'}">
+                        <ng-pluralize count="status.position" when="{'one': 'Du har 1 person före dig i kön', 'other': 'Du har {} personer före dig i kön'}">
                         </ng-pluralize>
                     </h3>
-                    <p>(auto-refresh activated)</p>
+                    <p>(Uppdateras automatiskt)</p>
                 </div>
                 <div ng-if="status.statusCode == 'running'">
-                    <h3>Test is running...</h3>
-                    <p>(auto-refresh activated)</p>
+                    <h3>Testet körs (kan ta upp till 1 minut)</h3>
+                    <p>(Uppdateras automatiskt)</p>
                 </div>
                 <div ng-if="status.statusCode == 'complete'">
-                    <h3>Test complete</h3>
-                    <p>Opening results...</p>
+                    <h3>Testet är klart</h3>
+                    <p>Genererar resultatet...</p>
                 </div>
             </div>
             <div ng-if="notFound == true">
-                <h3>Error 404 (test not found)</h3>
-                <p>The server probably just rebooted. We are very sorry about that, please try to launch the test again.</p>
+                <h3>404 (Testet hittades inte)</h3>
+                <p>Något gick fel. Testa köra testet lite senare, om det fortfarande inte fungerar får du gärna kontakta oss.</p>
 
-                <a class="btn btn-primary original" href="<%= baseUrl %>"><span class="mdi mdi-arrow-left mdi-24px original align-middle"></span> <small class="align-text-top">New test</small></a>
+                <a class="btn btn-primary original" href="<%= baseUrl %>"><span class="mdi mdi-arrow-left mdi-24px original align-middle"></span> <small class="align-text-top">Nytt test</small></a>
             </div>
             <div ng-if="connectionLost == true">
-                <h3>Connection lost with server</h3>
-                <p>Check your wifi cable, or maybe YellowLab.tools is rebooting.</p>
+                <h3>Tappade anslutning till servern</h3>
+                <p>Kolla gärna din anslutning. Testa köra testet lite senare, om det fortfarande inte fungerar får du gärna kontakta oss.</p>
             </div>
         </div>
     </div>
