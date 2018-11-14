@@ -44,7 +44,7 @@
             }
         },
         "badJavascript": {
-            "label": "Dålig JavaScript",
+            "label": "Dåligt JavaScript",
             "policies": {
                 "jsErrors": 1,
                 "documentWriteCalls": 2,

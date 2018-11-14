@@ -3,11 +3,11 @@
         <div class="row">
             <div class="col-lg-8 offset-lg-2">
                 <h1 class="mb-5 text-center">
-                    Hur bra är din hemsida byggd?
+                    HUR BRA ÄR ER HEMSIDA?
                 </h1>
             </div>
             <div class="col-lg-6 offset-lg-3">
-                <p class="text-center normal">Få en teknisk webbanalys av hur Google uppfattar er hemsida och vad ni kan förbättra på den – det tar bara 1 minut!</p>
+                <p class="text-center normal">Få en teknisk webbanalys på er hemsida genom vårt verktyg och se vad ni kan förbättra på den – det tar bara 1 minut!</p>
             </div>
         </div>
     </div>
@@ -18,14 +18,14 @@
         <div class="col-lg-6 offset-lg-3 text-center">
             <form ng-submit="launchTest()">
                 <div class="form-group">
-                    <label for="search-domain">Fyll i din hemsidas URL nedan</label>
+                    <label for="search-domain">Fyll i hemsidans URL här:</label>
                     <input type="search" ng-model="url" class="form-control" id="search-domain" aria-describedby="search-domain" placeholder="https://www.minsida.se">
                     <button type="submit" class="btn btn-warning mr-0" ng-class="{disabled: !url}" ng-disabled="!url">Kör test</button>
                 </div>
             </form>
         </div>
         <div class="col-lg-6 offset-lg-3 how-you-want-to-see-your-website pt-5">
-            <p class="pb-0 mb-0">Välj hur du vill se din hemsida:</p>
+            <p class="pb-0 mb-0">Välj vilken enhet testet ska visas på:</p>
             <button ng-class="{active: settings.device == 'desktop'}" ng-click="settings.device = 'desktop'">
                 <span class="mdi mdi-desktop-mac"></span>
                 <span class="device">Dator</span>
