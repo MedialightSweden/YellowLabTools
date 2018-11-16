@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-12 col-md-10 offset-md-1">
             <div class="rule board">
-                <div class="backToDashboard backButton"><a href="#" ng-click="backToDashboard()" class="btn btn-outline-primary original"><span class="mdi mdi-chevron-left"></span> Back to dashboard</a></div>
+                <div class="backToDashboard backButton"><a href="#" ng-click="backToDashboard()" class="btn btn-outline-primary original"><span class="mdi mdi-chevron-left"></span> Tillbaka</a></div>
 
                 <div ng-if="rule" class="ruleTable">
                     <div class="left">
@@ -13,24 +13,24 @@
                     </div>
                     <div class="right">
                         <h3>
-                            Value:
+                            Värde:
                             <span ng-if="rule.policy.unit == 'bytes'">{{rule.value | bytes}}</span>
                             <span ng-if="rule.policy.unit != 'bytes'">{{rule.value}}</span>
                         </h3>
                         <div class="okThreshold" ng-if="rule.score < 100 && rule.policy.isOkThreshold !== undefined">
-                            Have
+                            Du behöver ha
                             <span ng-if="rule.policy.unit == 'bytes'">{{rule.policy.isOkThreshold | bytes}}</span>
                             <span ng-if="rule.policy.unit != 'bytes'">{{rule.policy.isOkThreshold}}</span>
-                            <span ng-if="rule.policy.isOkThreshold > 0 && rule.policy.isOkThreshold < rule.policy.isBadThreshold">or less</span>
-                            <span ng-if="rule.policy.isOkThreshold > rule.policy.isBadThreshold">or more</span>
-                            to get the 100/100 score.
+                            <span ng-if="rule.policy.isOkThreshold > 0 && rule.policy.isOkThreshold < rule.policy.isBadThreshold">eller mindre</span>
+                            <span ng-if="rule.policy.isOkThreshold > rule.policy.isBadThreshold">eller mer</span>
+                            för att få 100/100.
                         </div>
                         <div ng-bind-html="rule.policy.message" class="message"></div>
                     </div>
                 </div>
                 <div ng-if="rule.abnormal" class="warning">
-                    <h3>Warning</h3>
-                    <p>This rule reached the abnormality threshold, which means there is a real problem you should care about.</p>
+                    <h3>Varning</h3>
+                    <p>Denna regel nådde gränsen för vad vi inser är ett problem, försök undersök om det finns lösningar till problemet.</p>
                 </div>
                 <div class="offenders" ng-if="rule.policy.hasOffenders">
                     <h3 ng-if="rule.offendersObj.count >= 0"><ng-pluralize count="rule.offendersObj.count" when="{'0': 'No offenders', 'one': '1 offender', 'other': '{} offenders'}"></ng-pluralize></h3>
@@ -112,7 +112,7 @@
                                 <div ng-if="policyName === 'cssParsingErrors'">
                                     <b>{{offender.error}}</b>
                                     <file-and-line file="offender.file" line="offender.line" column="offender.column"></file-and-line>
-                                    <span ng-if="offender.file">(<a href="http://jigsaw.w3.org/css-validator/validator?profile=css3&usermedium=all&warning=no&uri={{offender.file | encodeURIComponent}}" target="_blank">Check on the W3C validator</a>)</span>
+                                    <span ng-if="offender.file">(<a href="http://jigsaw.w3.org/css-validator/validator?profile=css3&usermedium=all&warning=no&uri={{offender.file | encodeURIComponent}}" target="_blank">Testa W3C validator</a>)</span>
                                 </div>
 
                                 <div ng-if="policyName === 'cssImports'">
@@ -249,7 +249,7 @@
                 </div>
 
                 <div ng-if="policyName === 'totalWeight'">
-                    <h3>Weight by MIME type</h3>
+                    <h3>Viktning efter MIME-typ</h3>
                     <div class="totalWeightPie">
                         <canvas class="chart chart-doughnut" chart-data="weightData" chart-labels="weightLabels" chart-options="weightOptions" chart-colors="weightColours"></canvas>
                     </div>
@@ -265,33 +265,33 @@
                 </div>
 
                 <div ng-if="policyName === 'imageOptimization'">
-                    <h3 ng-if="rule.value > 0">{{rule.value | bytes}} could be saved on <ng-pluralize count="rule.offendersObj.list.images.length" when="{'one': '1 image', 'other': '{} images'}"></ng-pluralize></h3>
+                    <h3 ng-if="rule.value > 0">{{rule.value | bytes}} kan sparas på <ng-pluralize count="rule.offendersObj.list.images.length" when="{'one': '1 bild', 'other': '{} bilder'}"></ng-pluralize></h3>
                     <div class="imageOffenders">
                         <div ng-repeat="image in rule.offendersObj.list.images | orderBy:'-gain'">
                             <div>
-                                Current file: <url-link url="image.url" max-length="50"></url-link>
+                                Fil: <url-link url="image.url" max-length="50"></url-link>
                                 <div><a href="{{image.url}}" target="_blank"><img ng-src="{{image.url | https}}" class="checker" /></a></div>
                             </div>
                             <div>
-                                <p ng-if="!image.afterCompression">Current weight: {{image.original | bytes}}</p>
-                                <p ng-if="image.afterCompression">Current weight: {{image.original | bytes}} ({{image.afterCompression | bytes}} gzipped)</p>
-                                <p ng-if="image.lossless && image.afterOptimizationAndCompression">With a lossless optimization:<br/>{{image.afterOptimizationAndCompression | bytes}} gzipped (<b>-{{image.gain | bytes}}</b> gzipped)</p>
-                                <p ng-if="image.lossless && !image.afterOptimizationAndCompression">With a lossless optimization:<br/>{{image.lossless | bytes}} <span ng-if="!image.lossy">(<b>-{{image.gain | bytes}}</b>)</span></p>
-                                <p ng-if="image.lossy && image.afterOptimizationAndCompression">With a lossy optimization:<br/>{{image.afterOptimizationAndCompression | bytes}} gzipped (<b>-{{image.gain | bytes}} gzipped</b>)</p>
-                                <p ng-if="image.lossy && !image.afterOptimizationAndCompression">With a lossy optimization:<br/>{{image.lossy | bytes}} (<b>-{{image.gain | bytes}}</b>)</p>
+                                <p ng-if="!image.afterCompression">Nuvarande storlek: {{image.original | bytes}}</p>
+                                <p ng-if="image.afterCompression">Nuvarande storlek: {{image.original | bytes}} ({{image.afterCompression | bytes}} gzipped)</p>
+                                <p ng-if="image.lossless && image.afterOptimizationAndCompression">Med lossless optimering:<br/>{{image.afterOptimizationAndCompression | bytes}} gzipped (<b>-{{image.gain | bytes}}</b> gzipped)</p>
+                                <p ng-if="image.lossless && !image.afterOptimizationAndCompression">Med lossless optimering:<br/>{{image.lossless | bytes}} <span ng-if="!image.lossy">(<b>-{{image.gain | bytes}}</b>)</span></p>
+                                <p ng-if="image.lossy && image.afterOptimizationAndCompression">Med lossy optimering:<br/>{{image.afterOptimizationAndCompression | bytes}} gzipped (<b>-{{image.gain | bytes}} gzipped</b>)</p>
+                                <p ng-if="image.lossy && !image.afterOptimizationAndCompression">Med lossy optimering:<br/>{{image.lossy | bytes}} (<b>-{{image.gain | bytes}}</b>)</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div ng-if="policyName === 'gzipCompression'">
-                    <h3 ng-if="rule.value > 0">{{rule.value | bytes}} could be saved on <ng-pluralize count="rule.offendersObj.list.images.length" when="{'one': '1 file', 'other': '{} files'}"></ng-pluralize></h3>
+                    <h3 ng-if="rule.value > 0">{{rule.value | bytes}} kan sparas på <ng-pluralize count="rule.offendersObj.list.images.length" when="{'one': '1 file', 'other': '{} files'}"></ng-pluralize></h3>
                     <div class="table">
                         <div class="headers">
-                            <div>File</div>
-                            <div>Current weight</div>
-                            <div>Gzipped</div>
-                            <div>Gain</div>
+                            <div>Fil</div>
+                            <div>Nuvarande storlek</div>
+                            <div>Gzippad</div>
+                            <div>Spara</div>
                         </div>
                         <div ng-repeat="file in rule.offendersObj.list.files | orderBy:'-gain'">
                             <div>
@@ -303,15 +303,14 @@
                         </div>
                     </div>
                 </div>
-
                 <div ng-if="policyName === 'fileMinification'">
-                    <h3 ng-if="rule.value > 0">{{rule.value | bytes}} could be saved on <ng-pluralize count="rule.offendersObj.list.files.length" when="{'one': '1 file', 'other': '{} files'}"></ng-pluralize></h3>
+                    <h3 ng-if="rule.value > 0">{{rule.value | bytes}} kan sparas på <ng-pluralize count="rule.offendersObj.list.files.length" when="{'one': '1 file', 'other': '{} files'}"></ng-pluralize></h3>
                     <div class="table">
                         <div class="headers">
-                            <div>File</div>
-                            <div>Current weight</div>
-                            <div>Minified</div>
-                            <div>Gain</div>
+                            <div>Fil</div>
+                            <div>Nuvarande storlek</div>
+                            <div>Minifierad</div>
+                            <div>Spara</div>
                         </div>
                         <div ng-repeat="file in rule.offendersObj.list.files | orderBy:'-gain'">
                             <div>
@@ -327,11 +326,11 @@
                 </div>
 
                 <div ng-if="policyName === 'totalRequests'">
-                    <h3>Requests by MIME type</h3>
+                    <h3>Förfrågningar efter MIME-typ</h3>
                     <div ng-repeat="(type, requests) in rule.offendersObj.list.byType">
                         <h3><ng-pluralize count="requests.length" when="{'0': 'No ' + type + ' request', 'one': '1 ' + type + ' request', 'other': '{} ' + type + ' requests'}"></ng-pluralize></h3>
-                        <p ng-if="type == 'css' && requests.length > 2">Reduce the number of stylesheets by concatenating them.</p>
-                        <p ng-if="type == 'js' && requests.length > 3">Reduce the number of scripts by concatenating them.</p>
+                        <p ng-if="type == 'css' && requests.length > 2">Minska antalet stylesheets genom att sammanfoga dem.</p>
+                        <p ng-if="type == 'js' && requests.length > 3">Minska antalet scripts genom att sammanfoga dem.</p>
                         <p ng-if="type == 'image' && requests.length > 5">Reduce the number of images by lazyloading them or by spriting them.</p>
                         <p ng-if="type == 'webfont' && requests.length > 1">Fonts are generally loaded on the critical path of the head. Load as few as possible.</p>
                         <p ng-if="type == 'other' && requests.length > 0">They can be Flash, XML, music or any undetected format.</p>
