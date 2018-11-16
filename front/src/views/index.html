@@ -17,10 +17,12 @@
     <div class="container">
         <div class="col-lg-6 offset-lg-3 text-center">
             <form ng-submit="launchTest()">
-                <div class="form-group">
-                    <label for="search-domain">Fyll i hemsidans URL här:</label>
-                    <input type="search" ng-model="url" class="form-control" id="search-domain" aria-describedby="search-domain" placeholder="https://www.minsida.se">
-                    <button type="submit" class="btn btn-warning mr-0" ng-class="{disabled: !url}" ng-disabled="!url">Kör test</button>
+                <label for="domain" class="w-100 text-left font-weight-400 font-italic font-size-15">Fyll i hemsidans URL här:</label>
+                <div class="input-group">
+                    <input type="search" ng-model="url" class="form-control" id="domain" aria-describedby="search-domain" placeholder="https://www.minsida.se">
+                    <div class="input-group-append">
+                        <button class="btn btn-warning" style="padding-left: 20px !important; padding-right: 20px !important;" type="submit" ng-class="{disabled: !url}" ng-disabled="!url">Kör test</button>
+                    </div>
                 </div>
             </form>
         </div>
