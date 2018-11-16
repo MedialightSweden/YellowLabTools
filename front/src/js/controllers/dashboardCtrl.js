@@ -13,6 +13,11 @@ dashboardCtrl.controller('DashboardCtrl', ['$scope', '$rootScope', '$routeParams
                 $rootScope.loadedResult = result;
                 $scope.result = result;
                 init();
+                if (window['dataLayer']) {
+                    var url = $scope.result.params.url;
+                    var score = $scope.globalScore;
+                    window['dataLayer'].push({'event':'noor.analyzeCompleted', 'analyzedUrl': url, 'analyzeScore':score});
+                }
             }, function(err) {
                 $scope.error = true;
             });

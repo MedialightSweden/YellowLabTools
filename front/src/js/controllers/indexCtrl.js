@@ -6,6 +6,10 @@ indexCtrl.controller('IndexCtrl', ['$scope', '$routeParams', '$location', 'Setti
 
     $scope.launchTest = function() {
         if ($scope.url) {
+            if (window['dataLayer']) {
+                var url = $scope.url;
+                window['dataLayer'].push({'event':'noor.analyzeStarted', 'analyzingUrl': url});
+            }
             $location.search('url', null);
             $location.search('run', null);
             Settings.saveSettings($scope.settings);
