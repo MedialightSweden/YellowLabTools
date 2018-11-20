@@ -88,7 +88,19 @@ module.exports = function(grunt) {
             build: {
                 files: [
                     {src: ['./front/src/img/favicon.png'], dest: './front/build/img/favicon.png'},
+                    {src: ['./front/src/img/footer.png'], dest: './front/build/img/footer.png'},
+                    {src: ['./front/src/img/gratis-analys.jpg'], dest: './front/build/img/gratis-analys.jpg'},
+                    {src: ['./front/src/img/gratis-analys@2x.jpg'], dest: './front/build/img/gratis-analys@2x.jpg'},
+                    {src: ['./front/src/img/gratis-analys@3x.jpg'], dest: './front/build/img/gratis-analys@3x.jpg'},
+                    {src: ['./front/src/img/logo.svg'], dest: './front/build/img/logo.svg'},
                     {src: ['./front/src/img/logo-large.png'], dest: './front/build/img/logo-large.png'},
+                    {src: ['./front/src/img/logo-no-shadow.svg'], dest: './front/build/img/logo-no-shadow.svg'},
+                    {src: ['./front/src/img/simple-wave.png'], dest: './front/build/img/simple-wave.png'},
+                    {src: ['./front/src/fonts/materialdesignicons-webfont.eot'], dest: './front/build/fonts/materialdesignicons-webfont.eot'},
+                    {src: ['./front/src/fonts/materialdesignicons-webfont.svg'], dest: './front/build/fonts/materialdesignicons-webfont.svg'},
+                    {src: ['./front/src/fonts/materialdesignicons-webfont.ttf'], dest: './front/build/fonts/materialdesignicons-webfont.ttf'},
+                    {src: ['./front/src/fonts/materialdesignicons-webfont.woff'], dest: './front/build/fonts/materialdesignicons-webfont.woff'},
+                    {src: ['./front/src/fonts/materialdesignicons-webfont.woff2'], dest: './front/build/fonts/materialdesignicons-webfont.woff2'},
                 ]
             }
         },
@@ -240,7 +252,7 @@ module.exports = function(grunt) {
         'replace',
         'htmlmin:views',
         'inline_angular_templates',
-        'filerev',
+        //'filerev',
         'usemin',
         'htmlmin:main',
         'clean:tmp'
