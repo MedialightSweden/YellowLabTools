@@ -1,7 +1,9 @@
 var indexCtrl = angular.module('indexCtrl', []);
 
 indexCtrl.controller('IndexCtrl', ['$scope', '$routeParams', '$location', 'Settings', 'API', function($scope, $routeParams, $location, Settings, API) {
-    
+
+    $scope.agreed = false;
+
     $scope.settings = Settings.getMergedSettings();
 
     $scope.launchTest = function() {

@@ -21,11 +21,12 @@
                 <div class="input-group">
                     <input type="search" ng-model="url" class="form-control" id="domain" aria-describedby="search-domain" placeholder="https://www.minsida.se">
                     <div class="input-group-append">
-                        <button class="btn btn-warning" style="padding-left: 20px !important; padding-right: 20px !important;" type="submit" ng-class="{disabled: !url}" ng-disabled="!url">Kör test</button>
+                        <button class="btn btn-warning" style="padding-left: 20px !important; padding-right: 20px !important;" type="submit" ng-class="{disabled: !url}" ng-disabled="!url || !agreed">Kör test</button>
                     </div>
                 </div>
             </form>
         </div>
+        <div class="col-lg-6 offset-lg-3 text-center mt-4"><label><input type="checkbox" ng-model="agreed" /> Jag godkänner <a href="/pdfs/Noor-GDPR-Nyhetsbrev.pdf" target="_blank" class="pdf-link text-warning">allmänna villkor</a>.</label></div>
         <div class="col-lg-6 offset-lg-3 how-you-want-to-see-your-website pt-5">
             <p class="pb-0 mb-0">Välj vilken enhet testet ska visas på:</p>
             <button ng-class="{active: settings.device == 'desktop'}" ng-click="settings.device = 'desktop'">
