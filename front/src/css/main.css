@@ -135,7 +135,17 @@
 .backToDashboard .btn-outline-primary:hover {
   border: 1px solid #1b2158 !important;
 }
-/*MDI ICONS*/
+/*added by Christoffer*/
+.intro {
+  padding-top: 3rem;
+}
+.intro .container .row > .offset-lg-2 {
+  padding-top: 5rem;
+}
+.intro .container .row > .offset-lg-2 h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
 .website-test .container .mt-4 {
   color: #fff !important;
 }
