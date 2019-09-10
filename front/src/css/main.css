@@ -136,15 +136,11 @@
   border: 1px solid #1b2158 !important;
 }
 /*added by Christoffer*/
-.intro {
-  padding-top: 3rem;
+#body {
+  padding-top: 8rem;
 }
-.intro .container .row > .offset-lg-2 {
-  padding-top: 5rem;
-}
-.intro .container .row > .offset-lg-2 h1 {
-  font-size: 36px;
-  font-weight: 700;
+.website-test.my-5 h3 {
+  color: #fff !important;
 }
 .website-test .container .mt-4 {
   color: #fff !important;
