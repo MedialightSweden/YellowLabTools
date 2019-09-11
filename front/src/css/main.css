@@ -175,6 +175,14 @@
   margin: 0 auto;
   padding: .5rem 0;
 }
+@media (max-width: 380px) {
+  .website-test .container .how-you-want-to-see-your-website p {
+    font-size: 14px !important;
+  }
+  .website-test .container .how-you-want-to-see-your-website button {
+    margin: 0 .5rem;
+  }
+}
 .free-analysis .container .row .col-lg-8.offset-lg-2 {
   margin: 0 auto !important;
   padding-bottom: 1.5rem !important;
@@ -187,4 +195,20 @@
   padding-bottom: 1rem !important;
   text-align: center !important;
   text-transform: uppercase;
+}
+@media (max-width: 414px) {
+  .input-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .input-group input.form-control {
+    border-top-right-radius: 3px !important;
+    border-bottom-right-radius: 3px !important;
+    width: 100% !important;
+  }
+  .input-group button {
+    border-top-left-radius: 3px !important;
+    border-bottom-left-radius: 3px !important;
+    width: 100%;
+  }
 }

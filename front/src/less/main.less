@@ -204,6 +204,14 @@
                     }
                 }
             }
+            @media (max-width: 380px) {
+                p {
+                    font-size: 14px !important;
+                }
+                button {
+                    margin: 0 .5rem;
+                }
+            }
         }
     }
   }
@@ -229,6 +237,24 @@
                     text-transform: uppercase;
                 }
             }
+        }
+    }
+}
+@media (max-width: 414px) {
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        input {
+            &.form-control {
+                border-top-right-radius: 3px !important;
+                border-bottom-right-radius: 3px !important;
+                width: 100% !important;
+            }
+        }
+        button {
+            border-top-left-radius: 3px !important;
+            border-bottom-left-radius: 3px !important;
+            width: 100%;
         }
     }
 }
