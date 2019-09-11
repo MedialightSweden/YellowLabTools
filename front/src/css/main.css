@@ -139,6 +139,13 @@
 #body {
   padding-top: 8rem;
 }
+#body .intro h1 {
+  color: #1b2158 !important;
+  font-size: 36px !important;
+  font-weight: 700 !important;
+  line-height: 54px !important;
+  margin-block-end: 8px !important;
+}
 .website-test.my-5 h3 {
   color: #fff !important;
 }
