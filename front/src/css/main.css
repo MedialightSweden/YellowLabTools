@@ -202,13 +202,13 @@
     flex-direction: column;
   }
   .input-group input.form-control {
-    border-top-right-radius: 3px !important;
-    border-bottom-right-radius: 3px !important;
+    border-top-right-radius: 0.25rem !important;
+    border-bottom-right-radius: 0.25rem !important;
     width: 100% !important;
   }
   .input-group button {
-    border-top-left-radius: 3px !important;
-    border-bottom-left-radius: 3px !important;
+    border-top-left-radius: 0.25rem !important;
+    border-bottom-left-radius: 0.25rem !important;
     width: 100%;
   }
 }
